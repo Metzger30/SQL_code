@@ -1,0 +1,31 @@
+CREATE TABLE clash_of_clans (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_name TEXT,
+    level INTEGER,
+    troops_donated INTEGER,
+    troops_received INTEGER);
+    
+INSERT INTO clash_of_clans (user_name, level, troops_donated, troops_received) VALUES ("Metzger30", 57, 237, 456);
+INSERT INTO clash_of_clans (user_name, level, troops_donated, troops_received) VALUES ("Bree", 67, 657, 896);
+INSERT INTO clash_of_clans (user_name, level, troops_donated, troops_received) VALUES ("Reid33", 23, 120, 467);
+
+SELECT * FROM clash_of_clans;
+
+UPDATE clash_of_clans SET troops_donated=267 WHERE id = 1;
+
+SELECT * FROM clash_of_clans;
+
+
+id	user_name	level	troops_donated	troops_received
+1	Metzger30	57	267	456
+2	Bree	67	657	896
+3	Reid33	23	120	467
+
+id	user_name	level	troops_donated	troops_received
+1	Metzger30	57	267	486
+2	Bree	67	657	896
+3	Reid33	23	120	467
+
+id	user_name	level	troops_donated	troops_received
+1	Metzger30	57	267	486
+2	Bree	67	657	896
