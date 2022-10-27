@@ -1,0 +1,211 @@
+CREATE TABLE people ( 
+        id INTEGER PRIMARY KEY AUTOINCREMENT, 
+        name TEXT, 
+        age INTEGER);
+
+INSERT INTO people (name, age) VALUES ("Jason Bateman", 53);
+INSERT INTO people (name, age) VALUES ("Will Arnett", 52);
+INSERT INTO people (name, age) VALUES ("Tobey Maguire", 46);
+INSERT INTO people (name, age) VALUES ("Meryl Streep", 72);
+INSERT INTO people (name, age) VALUES ("David Spade", 57); 
+INSERT INTO people (name, age) VALUES ("Zendaya", 25);
+INSERT INTO people (name, age) VALUES ("Tom Holland", 25);
+INSERT INTO people (name, age) VALUES ("Robert Downey Jr", 57);
+INSERT INTO people (name, age) VALUES ("Emma Stone", 33);
+INSERT INTO people (name, age) VALUES ("Andrew Garfield", 38);
+INSERT INTO people (name, age) VALUES ("Ryan Reynolds", 45);
+INSERT INTO people (name, age) VALUES ("Blake Lively", 34);
+INSERT INTO people (name, age) VALUES ("Scarlett Johansson", 37);
+INSERT INTO people (name, age) VALUES ("Chevy Chase", 78);
+INSERT INTO people (name, age) VALUES ("Steve Carell", 59);
+INSERT INTO people (name, age) VALUES ("Charlie Day", 46);
+INSERT INTO people (name, age) VALUES ("Jason Sudeikis", 46);
+INSERT INTO people (name, age) VALUES ("Leonardo DiCaprio", 47);
+
+CREATE TABLE movies ( 
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        person_id INTEGER,
+        title TEXT);
+
+INSERT INTO movies (person_id, title) VALUES (1, "Horrible Bosses"); 
+INSERT INTO movies (person_id, title) VALUES (1, "Game Night");
+INSERT INTO movies (person_id, title) VALUES (1, "Arrested Development");
+INSERT INTO movies (person_id, title) VALUES (2, "Arrested Development");
+INSERT INTO movies (person_id, title) VALUES (2, "Lego Batman");
+INSERT INTO movies (person_id, title) VALUES (3, "Spiderman");
+INSERT INTO movies (person_id, title) VALUES (3, "Spiderman: No Way Home");
+INSERT INTO movies (person_id, title) VALUES (3, "The Great Gatsby");
+INSERT INTO movies (person_id, title) VALUES (4, "Mamma Mia!");
+INSERT INTO movies (person_id, title) VALUES (4, "Don't Look Up");
+INSERT INTO movies (person_id, title) VALUES (5, "Grown Ups");
+INSERT INTO movies (person_id, title) VALUES (5, "Tommy Boy");
+INSERT INTO movies (person_id, title) VALUES (5, "Joe Dirt");
+INSERT INTO movies (person_id, title) VALUES (6, "Spiderman: No Way Home");
+INSERT INTO movies (person_id, title) VALUES (6, "Spiderman: Homecoming");
+INSERT INTO movies (person_id, title) VALUES (6, "Spiderman: Far From Home");
+INSERT INTO movies (person_id, title) VALUES (6, "Dune");
+INSERT INTO movies (person_id, title) VALUES (7, "Spiderman: No Way Home");
+INSERT INTO movies (person_id, title) VALUES (7, "Spiderman: Homecoming");
+INSERT INTO movies (person_id, title) VALUES (7, "Spiderman: Far From Home");
+INSERT INTO movies (person_id, title) VALUES (7, "Uncharted");
+INSERT INTO movies (person_id, title) VALUES (8, "Iron Man");
+INSERT INTO movies (person_id, title) VALUES (8, "Iron Man 2");
+INSERT INTO movies (person_id, title) VALUES (8, "Iron Man 3");
+INSERT INTO movies (person_id, title) VALUES (8, "The Avengers");
+INSERT INTO movies (person_id, title) VALUES (8, "Sherlock Holmes");
+INSERT INTO movies (person_id, title) VALUES (9, "The Amazing Spiderman");
+INSERT INTO movies (person_id, title) VALUES (9, "The Amazing Spiderman 2");
+INSERT INTO movies (person_id, title) VALUES (9, "Easy A");
+INSERT INTO movies (person_id, title) VALUES (10, "The Amazing Spiderman");
+INSERT INTO movies (person_id, title) VALUES (10, "The Amazing Spiderman 2");
+INSERT INTO movies (person_id, title) VALUES (10, "Spiderman: No Way Home");
+INSERT INTO movies (person_id, title) VALUES (10, "tick, tick, BOOM!");
+INSERT INTO movies (person_id, title) VALUES (11, "Deadpool");
+INSERT INTO movies (person_id, title) VALUES (11, "Deadpool 2");
+INSERT INTO movies (person_id, title) VALUES (11, "The Proposal");
+INSERT INTO movies (person_id, title) VALUES (11, "Free Guy");
+INSERT INTO movies (person_id, title) VALUES (11, "Green Lantern");
+INSERT INTO movies (person_id, title) VALUES (12, "The Shallows");
+INSERT INTO movies (person_id, title) VALUES (12, "Green Lantern");
+INSERT INTO movies (person_id, title) VALUES (13, "The Avengers");
+INSERT INTO movies (person_id, title) VALUES (13, "Black Widow");
+INSERT INTO movies (person_id, title) VALUES (13, "Lucy");
+INSERT INTO movies (person_id, title) VALUES (14, "Caddyshack");
+INSERT INTO movies (person_id, title) VALUES (14, "National Lampoon's Vaction");
+INSERT INTO movies (person_id, title) VALUES (14, "National Lampoon's Christmas Vacation");
+INSERT INTO movies (person_id, title) VALUES (15, "The 40-Year Old Virgin");
+INSERT INTO movies (person_id, title) VALUES (15, "Despicable Me");
+INSERT INTO movies (person_id, title) VALUES (15, "Get Smart");
+INSERT INTO movies (person_id, title) VALUES (16, "Horrible Bosses");
+INSERT INTO movies (person_id, title) VALUES (16, "Fist Fight");
+INSERT INTO movies (person_id, title) VALUES (17, "Horrible Bosses");
+INSERT INTO movies (person_id, title) VALUES (17, "We're The Millers");
+INSERT INTO movies (person_id, title) VALUES (17, "Hall Pass");
+INSERT INTO movies (person_id, title) VALUES (18, "Don't Look Up");
+INSERT INTO movies (person_id, title) VALUES (18, "The Great Gatsby");
+INSERT INTO movies (person_id, title) VALUES (18, "The Titanic");
+INSERT INTO movies (person_id, title) VALUES (18, "The Wolf of Wall Street");
+
+
+
+CREATE TABLE co_workers ( 
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        movie_id INTEGER,
+        person1_id INTEGER,
+        person2_id INTEGER,
+        person3_id INTEGER);
+
+INSERT INTO co_workers (movie_id, person1_id, person2_id, person3_id) VALUES (3, 1, 2, NULL);
+INSERT INTO co_workers (movie_id, person1_id, person2_id, person3_id) VALUES (1, 1, 16, 17);
+INSERT INTO co_workers (movie_id, person1_id, person2_id, person3_id) VALUES (8, 3, 18, NULL);
+INSERT INTO co_workers (movie_id, person1_id, person2_id, person3_id) VALUES (7, 3, 7, 10);
+INSERT INTO co_workers (movie_id, person1_id, person2_id, person3_id) VALUES (8, 3, 18, NULL);
+INSERT INTO co_workers (movie_id, person1_id, person2_id, person3_id) VALUES (10, 4, 18, NULL);
+
+SELECT movies.id, movies.title, people.name FROM movies
+    JOIN people
+    ON movies.person_id = people.id;
+    
+SELECT movies.title, a.name, b.name, c.name FROM co_workers
+    JOIN movies
+    ON co_workers.movie_id = movies.id
+    JOIN people a
+    ON co_workers.person1_id = a.id
+    JOIN people b
+    ON co_workers.person2_id = b.id
+    Left OUTER JOIN people c
+    ON co_workers.person3_id = c.id;
+
+
+people  18 rows
+id (PK)INTEGER
+nameTEXT
+ageINTEGER
+
+movies  58 rows
+id (PK)INTEGER
+person_idINTEGER
+titleTEXT
+
+co_workers  6 rows
+id (PK)INTEGER
+movie_idINTEGER
+person1_idINTEGER
+person2_idINTEGER
+person3_idINTEGER
+QUERY RESULTS
+
+id	title	name
+1	Horrible Bosses	Jason Bateman
+2	Game Night	Jason Bateman
+3	Arrested Development	Jason Bateman
+4	Arrested Development	Will Arnett
+5	Lego Batman	Will Arnett
+6	Spiderman	Tobey Maguire
+7	Spiderman: No Way Home	Tobey Maguire
+8	The Great Gatsby	Tobey Maguire
+9	Mamma Mia!	Meryl Streep
+10	Don't Look Up	Meryl Streep
+11	Grown Ups	David Spade
+12	Tommy Boy	David Spade
+13	Joe Dirt	David Spade
+14	Spiderman: No Way Home	Zendaya
+15	Spiderman: Homecoming	Zendaya
+16	Spiderman: Far From Home	Zendaya
+17	Dune	Zendaya
+18	Spiderman: No Way Home	Tom Holland
+19	Spiderman: Homecoming	Tom Holland
+20	Spiderman: Far From Home	Tom Holland
+21	Uncharted	Tom Holland
+22	Iron Man	Robert Downey Jr
+23	Iron Man 2	Robert Downey Jr
+24	Iron Man 3	Robert Downey Jr
+25	The Avengers	Robert Downey Jr
+26	Sherlock Holmes	Robert Downey Jr
+27	The Amazing Spiderman	Emma Stone
+28	The Amazing Spiderman 2	Emma Stone
+29	Easy A	Emma Stone
+30	The Amazing Spiderman	Andrew Garfield
+31	The Amazing Spiderman 2	Andrew Garfield
+32	Spiderman: No Way Home	Andrew Garfield
+33	tick, tick, BOOM!	Andrew Garfield
+34	Deadpool	Ryan Reynolds
+35	Deadpool 2	Ryan Reynolds
+36	The Proposal	Ryan Reynolds
+37	Free Guy	Ryan Reynolds
+38	Green Lantern	Ryan Reynolds
+39	The Shallows	Blake Lively
+40	Green Lantern	Blake Lively
+41	The Avengers	Scarlett Johansson
+42	Black Widow	Scarlett Johansson
+43	Lucy	Scarlett Johansson
+44	Caddyshack	Chevy Chase
+45	National Lampoon's Vaction	Chevy Chase
+46	National Lampoon's Christmas Vacation	Chevy Chase
+47	The 40-Year Old Virgin	Steve Carell
+48	Despicable Me	Steve Carell
+49	Get Smart	Steve Carell
+50	Horrible Bosses	Charlie Day
+51	Fist Fight	Charlie Day
+52	Horrible Bosses	Jason Sudeikis
+53	We're The Millers	Jason Sudeikis
+54	Hall Pass	Jason Sudeikis
+55	Don't Look Up	Leonardo DiCaprio
+56	The Great Gatsby	Leonardo DiCaprio
+57	The Titanic	Leonardo DiCaprio
+58	The Wolf of Wall Street	Leonardo DiCaprio
+
+title	name	name	name
+Arrested Development	Jason Bateman	Will Arnett	NULL
+Horrible Bosses	Jason Bateman	Charlie Day	Jason Sudeikis
+The Great Gatsby	Tobey Maguire	Leonardo DiCaprio	NULL
+Spiderman: No Way Home	Tobey Maguire	Tom Holland	Andrew Garfield
+The Great Gatsby	Tobey Maguire	Leonardo DiCaprio	NULL
+Don't Look Up	Meryl Streep	Leonardo DiCaprio	NULL
+ 
+ 
+    
+    
+
+
+
